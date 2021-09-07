@@ -8,16 +8,15 @@ namespace CodingEvents.Controllers
 {
     public class EventsController : Controller
     {
+        static private List<string> Events = new List<string>();
+
         // GET: /<controller>/
         [HttpGet]
         public IActionResult Index()
         {
-            List<string> Events = new List<string>();
-            Events.Add("Code With Pride");
-            Events.Add("Apple WWDC");
             Events.Add("Strange Loop");
-
-            ViewBag.events = Events;
+            Events.Add("Grace Hopper");
+            Events.Add("Code with Pride");
 
             return View();
         }
@@ -25,8 +24,6 @@ namespace CodingEvents.Controllers
         [HttpGet]
         public IActionResult Add()
         {
-            // Any additional method code here
-
             return View();
         }
     }

@@ -36,3 +36,5 @@ C:\Users\msurm\csharp-practice\Class9and10\CodingEvents\CodingEvents\obj\Debug\n
 C:\Users\msurm\csharp-practice\Class9and10\CodingEvents\CodingEvents\obj\Debug\netcoreapp3.1\CodingEvents.pdb
 C:\Users\msurm\csharp-practice\Class9and10\CodingEvents\CodingEvents\obj\Debug\netcoreapp3.1\CodingEvents.genruntimeconfig.cache
 C:\Users\msurm\csharp-practice\Class9and10\CodingEvents\CodingEvents\obj\Debug\netcoreapp3.1\CodingEvents.csproj.CopyComplete
+C:\Users\msurm\csharp-practice\Class9and10\CodingEvents\CodingEvents\obj\Debug\netcoreapp3.1\Razor\Views\Events\Add.cshtml.g.cs
+C:\Users\msurm\csharp-practice\Class9and10\CodingEvents\CodingEvents\obj\Debug\netcoreapp3.1\Razor\Views\Events\Index.cshtml.g.cs

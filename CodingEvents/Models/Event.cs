@@ -5,20 +5,24 @@ namespace CodingEvents.Models
     {
         public string Name { get; set; }
         public string Description { get; set; }
+        public string ContactEmail { get; set; }
 
         public int Id { get; }
         private static int nextId = 1;
+
+        public Event(string name, string description, string contactEmail)
+        {
+            Name = name;
+            Description = description;
+            ContactEmail = contactEmail;
+            Id = nextId;
+            nextId++;
+        }
 
         public Event()
         {
             Id = nextId;
             nextId++;
-        }
-
-        public Event(string name, string description): this()
-        {
-            Name = name;
-            Description = description;
         }
 
         public override string ToString()

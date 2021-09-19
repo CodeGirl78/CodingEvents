@@ -1,6 +1,9 @@
-﻿@using CodingEvents.Models 
+﻿@using CodingEvents.Models
 
 @model List<Event>
+
+<link rel="stylesheet" type="text/css" href="~/css/events.css" />
+
 <h1>Coding Events</h1>
 
 <p>
@@ -18,28 +21,28 @@
 
 else
 {
-    <table class="table">
+    <table id="events">
         <tr>
-            <th>
-                ID
-            </th>
-            <th>
-                Name
-            </th>
-            <th>
-                Description
-            </th>
-            <th>
-                Contact Email
-            </th>
+            <th>Id</th>
+            <th>Event</th>
+            <th>Description</th>
+            <th>Contact Email</th>
+            <th>Location</th>
+            <th>Number of Attendees</th>
+            <th>Registration Required</th>
         </tr>
-        @foreach (var evt in Model)
+
+        @foreach (var meeting in Model)
         {
             <tr>
-                <td>@evt.Id</td>
-                <td>@evt.Name</td>
-                <td>@evt.Description</td>
-                <td>@evt.ContactEmail</td>
+                <td>@meeting.Id</td>
+                <td>@meeting.Name</td>
+                <td>@meeting.Description</td>
+                <td>@meeting.ContactEmail</td>
+                <td>@meeting.Location</td>
+                <td>@meeting.NumberAttendees</td>
+                <td>@meeting.MustRegister</td>
+                <td><a asp-controller="Events" asp-action="Edit" asp-route-id="@meeting.Id">Edit Event</a></td>
             </tr>
         }
     </table>

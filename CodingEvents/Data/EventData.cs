@@ -1,7 +1,5 @@
-﻿using System;
+﻿using CodingEvents.Models;
 using System.Collections.Generic;
-using System.Linq;
-using CodingEvents.Models;
 
 namespace CodingEvents.Data
 {
@@ -11,13 +9,13 @@ namespace CodingEvents.Data
         private static Dictionary<int, Event> Events = new Dictionary<int, Event>();
 
         // add events
-        public static void Add(Event newEvent) 
+        public static void Add(Event newEvent)
         {
             Events.Add(newEvent.Id, newEvent);
         }
 
         // retrieve the events
-        public static IEnumerable<Event> GetAll() 
+        public static IEnumerable<Event> GetAll()
         {
             return Events.Values;
         }

@@ -2,16 +2,13 @@
 using CodingEvents.Models;
 using CodingEvents.ViewModels;
 using Microsoft.AspNetCore.Mvc;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace CodingEvents.Controllers
 {
     public class EventsController : Controller
     {
-       // GET: /<controller>/
+        // GET: /<controller>/
         public IActionResult Index()
         {
             List<Event> events = new List<Event>(EventData.GetAll());
@@ -35,7 +32,8 @@ namespace CodingEvents.Controllers
                 {
                     Name = addEventViewModel.Name,
                     Description = addEventViewModel.Description,
-                    ContactEmail = addEventViewModel.ContactEmail
+                    ContactEmail = addEventViewModel.ContactEmail,
+                    Type = addEventViewModel.Type
                 };
 
                 EventData.Add(newEvent);

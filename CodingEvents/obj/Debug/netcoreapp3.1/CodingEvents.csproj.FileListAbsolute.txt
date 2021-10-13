@@ -47,3 +47,16 @@ C:\Users\msurm\csharp-practice\Class9and10\CodingEvents\CodingEvents\bin\Debug\n
 C:\Users\msurm\csharp-practice\Class9and10\CodingEvents\CodingEvents\bin\Debug\netcoreapp3.1\Pomelo.EntityFrameworkCore.MySql.dll
 C:\Users\msurm\csharp-practice\Class9and10\CodingEvents\CodingEvents\bin\Debug\netcoreapp3.1\Pomelo.JsonObject.dll
 C:\Users\msurm\csharp-practice\Class9and10\CodingEvents\CodingEvents\obj\Debug\netcoreapp3.1\Razor\Views\Events\Delete.cshtml.g.cs
+C:\Users\msurm\csharp-practice\Class9and10\CodingEvents\CodingEvents\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\msurm\csharp-practice\Class9and10\CodingEvents\CodingEvents\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
+C:\Users\msurm\csharp-practice\Class9and10\CodingEvents\CodingEvents\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\msurm\csharp-practice\Class9and10\CodingEvents\CodingEvents\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\msurm\csharp-practice\Class9and10\CodingEvents\CodingEvents\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+C:\Users\msurm\csharp-practice\Class9and10\CodingEvents\CodingEvents\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\msurm\csharp-practice\Class9and10\CodingEvents\CodingEvents\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\msurm\csharp-practice\Class9and10\CodingEvents\CodingEvents\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\msurm\csharp-practice\Class9and10\CodingEvents\CodingEvents\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\msurm\csharp-practice\Class9and10\CodingEvents\CodingEvents\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+C:\Users\msurm\csharp-practice\Class9and10\CodingEvents\CodingEvents\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\msurm\csharp-practice\Class9and10\CodingEvents\CodingEvents\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+C:\Users\msurm\csharp-practice\Class9and10\CodingEvents\CodingEvents\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll

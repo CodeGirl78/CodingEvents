@@ -19,5 +19,21 @@ namespace CodingEvents.Models
         public EventCategory()
         {
         }
+
+        public override string ToString()
+        {
+            return Name;
+        }
+
+        public override bool Equals(object obj)
+        {
+            return obj is Event @event &&
+                   Id == @event.Id;
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(Id);
+        }
     }
 }

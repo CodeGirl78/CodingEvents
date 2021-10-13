@@ -1,42 +1,64 @@
-﻿using CodingEvents.Models;
+﻿using CodingEvents.Data;
+using CodingEvents.Models;
+using CodingEvents.ViewModels;
 using Microsoft.AspNetCore.Mvc;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace CodingEvents.Controllers
 {
     public class EventsController : Controller
     {
-        //static private List<string> Events = new List<string>();
-        //private static Dictionary<string, string> Events = new Dictionary<string, string>();
-        static private List<Event> Events = new List<Event>();
-
         // GET: /<controller>/
-        [HttpGet]
         public IActionResult Index()
         {
-/*          Events.Add("Strange Loop");
-            Events.Add("Grace Hopper");
-            Events.Add("Code with Pride");*/
+            List<Event> events = new List<Event>(EventData.GetAll());
 
-            ViewBag.events = Events;
-
-            return View();
+            return View(events);
         }
 
-        [HttpGet]
         public IActionResult Add()
         {
+            AddEventViewModel addEventViewModel = new AddEventViewModel();
+
+            return View(addEventViewModel);
+        }
+
+        [HttpPost]
+        public IActionResult Add(AddEventViewModel addEventViewModel)
+        {
+            if (ModelState.IsValid)
+            {
+                Event newEvent = new Event
+                {
+                    Name = addEventViewModel.Name,
+                    Description = addEventViewModel.Description,
+                    ContactEmail = addEventViewModel.ContactEmail,
+                    Type = addEventViewModel.Type
+                };
+
+                EventData.Add(newEvent);
+
+                return Redirect("/Events");
+            }
+
+            return View(addEventViewModel);
+
+        }
+
+        public IActionResult Delete()
+        {
+            ViewBag.events = EventData.GetAll();
+
             return View();
         }
 
         [HttpPost]
-        [Route("/Events/Add")]
-        public IActionResult NewEvent(string name, string desc)
+        public IActionResult Delete(int[] eventIds)
         {
-            Events.Add(new Event(name, desc));
+            foreach (int eventId in eventIds)
+            {
+                EventData.Remove(eventId);
+            }
 
             return Redirect("/Events");
         }

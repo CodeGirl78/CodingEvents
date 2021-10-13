@@ -1,4 +1,5 @@
-﻿namespace CodingEvents.Models
+﻿using System;
+namespace CodingEvents.Models
 {
     public enum EventType
     {

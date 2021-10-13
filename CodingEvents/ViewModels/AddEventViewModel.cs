@@ -1,4 +1,5 @@
-﻿using CodingEvents.Models;
+﻿using System;
+using CodingEvents.Models;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;

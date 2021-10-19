@@ -24,7 +24,7 @@ namespace CodingEvents.Controllers
         public IActionResult Index()
         {
             ViewBag.title = "All Categories";
-            List<EventCategory> categories = context.EventCategories.ToList();
+            List<EventCategory> categories = context.Categories.ToList();
             return View(categories);
         }
 
@@ -36,13 +36,13 @@ namespace CodingEvents.Controllers
         }
 
         [HttpPost("/EventCategory/Create")]
-        public async Task<IActionResult> ProcessCreateEventCategoryForm([Bind("Name")] AddEventCategoryViewModel addEventCategoryViewModel)
+        public IActionResult ProcessCreateEventCategoryForm(AddEventCategoryViewModel addEventCategoryViewModel)
         {
             if (ModelState.IsValid)
             {
                 EventCategory newCategory = new EventCategory(addEventCategoryViewModel.Name);
-                context.EventCategories.Add(newCategory);
-                await context.SaveChangesAsync();
+                context.Categories.Add(newCategory);
+                context.SaveChangesAsync();
 
                 return Redirect("/EventCategory");
 

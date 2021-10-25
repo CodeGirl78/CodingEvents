@@ -1,10 +1,12 @@
-﻿using CodingEvents.Data;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using CodingEvents.Data;
 using CodingEvents.Models;
 using CodingEvents.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace CodingEvents.Controllers
 {
@@ -78,6 +80,16 @@ namespace CodingEvents.Controllers
             context.SaveChanges();
 
             return Redirect("/Events");
+        }
+
+        public IActionResult Detail(int id)
+        {
+            Event theEvent = context.Events
+               .Include(e => e.Category)
+               .Single(e => e.Id == id);
+
+            EventDetailViewModel viewModel = new EventDetailViewModel(theEvent);
+            return View(viewModel);
         }
     }
 }

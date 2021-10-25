@@ -12,7 +12,7 @@ namespace CodingEvents.Controllers
 {
     public class EventCategoryController : Controller
     {
-        private readonly EventDbContext context;
+        private EventDbContext context;
 
         public EventCategoryController(EventDbContext dbContext)
         {
@@ -23,7 +23,6 @@ namespace CodingEvents.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            ViewBag.title = "All Categories";
             List<EventCategory> categories = context.Categories.ToList();
             return View(categories);
         }
@@ -40,9 +39,13 @@ namespace CodingEvents.Controllers
         {
             if (ModelState.IsValid)
             {
-                EventCategory newCategory = new EventCategory(addEventCategoryViewModel.Name);
+                EventCategory newCategory = new EventCategory
+                {
+                    Name = addEventCategoryViewModel.Name
+                };
+
                 context.Categories.Add(newCategory);
-                context.SaveChangesAsync();
+                context.SaveChanges();
 
                 return Redirect("/EventCategory");
 

@@ -26,7 +26,8 @@ namespace CodingEvents.Controllers
 
         public IActionResult Add()
         {
-            AddEventViewModel addEventViewModel = new AddEventViewModel();
+            List<EventCategory> categories = context.Categories.ToList();
+            AddEventViewModel addEventViewModel = new AddEventViewModel(categories);
 
             return View(addEventViewModel);
         }
@@ -36,12 +37,13 @@ namespace CodingEvents.Controllers
         {
             if (ModelState.IsValid)
             {
+                EventCategory theCategory = context.Categories.Find(addEventViewModel.CategoryId);
                 Event newEvent = new Event
                 {
                     Name = addEventViewModel.Name,
                     Description = addEventViewModel.Description,
                     ContactEmail = addEventViewModel.ContactEmail,
-                    Type = addEventViewModel.Type
+                    Category = theCategory
                 };
 
                 context.Events.Add(newEvent);

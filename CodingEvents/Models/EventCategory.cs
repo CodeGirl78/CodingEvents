@@ -10,6 +10,7 @@ namespace CodingEvents.Models
         public string Name { get; set; }
 
         public int Id { get; set; }
+        public List<Event> events { get; set; }
 
         public EventCategory(string name)
         {

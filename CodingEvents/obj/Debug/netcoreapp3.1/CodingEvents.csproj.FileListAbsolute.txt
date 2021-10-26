@@ -65,3 +65,4 @@ C:\Users\msurm\csharp-practice\Class9and10\CodingEvents\CodingEvents\obj\Debug\n
 C:\Users\msurm\csharp-practice\Class9and10\CodingEvents\CodingEvents\obj\Debug\netcoreapp3.1\Razor\Views\Events\Detail.cshtml.g.cs
 C:\Users\msurm\csharp-practice\Class9and10\CodingEvents\CodingEvents\obj\Debug\netcoreapp3.1\Razor\Views\Tag\Add.cshtml.g.cs
 C:\Users\msurm\csharp-practice\Class9and10\CodingEvents\CodingEvents\obj\Debug\netcoreapp3.1\Razor\Views\Tag\Index.cshtml.g.cs
+C:\Users\msurm\csharp-practice\Class9and10\CodingEvents\CodingEvents\obj\Debug\netcoreapp3.1\Razor\Views\Tag\AddEvent.cshtml.g.cs

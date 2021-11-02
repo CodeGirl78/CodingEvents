@@ -12,7 +12,8 @@ namespace CodingEvents.Data
         public DbSet<Tag> Tags { get; set; }
         public DbSet<EventTag> EventTags { get; set; }
 
-        public EventDbContext(DbContextOptions<EventDbContext> options) : base(options)
+        public EventDbContext(DbContextOptions<EventDbContext> options)
+            : base(options)
         {
         }
 
